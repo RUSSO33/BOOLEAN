@@ -1,0 +1,126 @@
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+} 
+.overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    height: 110%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.content {
+    text-align: center; 
+    padding: 20px; 
+}
+
+.content img.logo {
+    max-width: 35%;
+    height: auto;
+    margin-bottom: 550px; 
+}
+
+
+.content h1 {
+    color:lime;
+    font-family: sans-serif;
+    position: absolute; 
+    bottom: 537px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.content .bar {
+    background-color: lime;
+    height: 35px; 
+    width: 75%; 
+    position: absolute;
+    bottom: 520px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.content .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+} 
+.content .buttons button {
+    border: none;
+    padding: 2px 4px;
+    margin: 6px 10px;
+    cursor: pointer;
+} 
+.scooter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 270px;
+    left: 10%;
+    width: 80%;
+}
+.scooter-item {
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    border-left: 5px solid lime; /* Lime bar on the left */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between items */
+    color: white; /* Text color */
+}
+
+
+.scooter-name,
+.scooter-distance,
+.scooter-status {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.status-indicator {
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-color: #ddd;
+    margin-top: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.status-indicator::after {
+    content: '';
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.status-indicator.almost-full::after {
+    width: 75%;
+    background-color: #FFA500;
+}
+
+.status-indicator.full::after {
+    width: 100%;
+    background-color: #4CAF50;
+}
+
+.status-indicator.low::after {
+    width: 25%;
+    background-color: #FF5722;
+}
